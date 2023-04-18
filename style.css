@@ -1,4 +1,9 @@
-img{
+header img {
+    max-width: 18%;
+    min-width: 18%;
+}
+
+.container img{
     max-width: 100%;
     height: auto;
     background: lightblue;

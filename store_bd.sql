@@ -41,7 +41,7 @@ CREATE TABLE `sneakers` (
 
 LOCK TABLES `sneakers` WRITE;
 /*!40000 ALTER TABLE `sneakers` DISABLE KEYS */;
-INSERT INTO `sneakers` VALUES (1,'Apple MacBook Pro',NULL,1799,NULL,'./upload/product1.png'),(2,'Sony E7 Headphones',NULL,147,NULL,'./upload/product2.png'),(3,'Sony Xperia Z4',NULL,459,NULL,'./upload/product3.png'),(4,'Samsung Galaxy A50',NULL,278,NULL,'./upload/product4.png');
+INSERT INTO `sneakers` VALUES (1,'Yeezy Zebra',NULL,1799,NULL,'./upload/product1.png'),(2,'Jordan 1 Retro Low OG',NULL,147,NULL,'./upload/product2.png'),(3,'Adidas Forum',NULL,459,NULL,'./upload/product3.png'),(4,'Nike Air Force 1 Black',NULL,278,NULL,'./upload/product4.png');
 /*!40000 ALTER TABLE `sneakers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-16 22:36:41
+-- Dump completed on 2023-04-18  0:13:20
