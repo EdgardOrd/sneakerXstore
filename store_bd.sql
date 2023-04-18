@@ -32,7 +32,7 @@ CREATE TABLE `sneakers` (
   `cantidad` int DEFAULT NULL,
   `imagen` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `sneakers` (
 
 LOCK TABLES `sneakers` WRITE;
 /*!40000 ALTER TABLE `sneakers` DISABLE KEYS */;
-INSERT INTO `sneakers` VALUES (1,'Yeezy Zebra',NULL,1799,NULL,'./upload/product1.png'),(2,'Jordan 1 Retro Low OG',NULL,147,NULL,'./upload/product2.png'),(3,'Adidas Forum',NULL,459,NULL,'./upload/product3.png'),(4,'Nike Air Force 1 Black',NULL,278,NULL,'./upload/product4.png');
+INSERT INTO `sneakers` VALUES (1,'Yeezy Zebra',NULL,299,NULL,'./upload/product1.png'),(2,'Jordan 1 Retro Low OG',NULL,399,NULL,'./upload/product2.png'),(3,'Adidas Forum',NULL,299,NULL,'./upload/product3.png'),(4,'Nike Air Force 1 Black',NULL,99,NULL,'./upload/product4.png'),(5,'Puma Wild Rider',NULL,150,NULL,'./upload/product5.png'),(6,'Nike Air Jordan 4 Retro',NULL,120,NULL,'./upload/product6.png'),(7,'Adidas Yeezy 700 v3',NULL,399,NULL,'./upload/product7.png'),(8,'New Balance 550 Green',NULL,90,NULL,'./upload/product8.png');
 /*!40000 ALTER TABLE `sneakers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-18  0:13:20
+-- Dump completed on 2023-04-18 16:44:27
