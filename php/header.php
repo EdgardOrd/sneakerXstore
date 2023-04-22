@@ -20,6 +20,39 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
             <div class="navbar-nav">
+                <a href="index.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i>Inicio</i> 
+                    </h5>
+                </a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
+                <a href="nuevos.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i>Nuevos Lanzamientos</i> 
+                    </h5>
+                </a>
+            </div>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
+                <a href="aboutus.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i>Sobre nosotros</i> 
+                    </h5>
+                </a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav">
                 <a href="cart.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
                         <i class="fas fa-shopping-cart"></i> Cart

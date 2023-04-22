@@ -39,3 +39,11 @@ header img {
       margin-bottom: 8%;
     }
   }
+
+
+  .parrafo
+  {
+    text-align: justify;
+    font-size: 48;
+    font-style: italic;
+  }
