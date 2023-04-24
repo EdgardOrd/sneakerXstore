@@ -42,6 +42,34 @@ class conexion
             echo $sql . "<br>" . $e->getMessage();
         }
     }
+
+    public function getTallas()
+    {
+        try {
+            $sql = "SELECT * FROM tallas";
+            $stmt = $this->connection->prepare($sql);
+            $stmt->execute();
+            return $stmt;
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+    }
+
+    public function getInStock($talla)
+    {
+        try {
+            $sql = "SELECT z.id, z.nombre, z.marca, z.precio, z.imagen,t.talla, s.cantidad
+            FROM sneakers AS z
+            JOIN stock AS s ON z.id = s.sneaker_id
+            JOIN tallas AS t ON t.id = s.talla_id
+            WHERE t.talla = $talla AND s.cantidad > 0";
+            $stmt = $this->connection->prepare($sql);
+            $stmt->execute();
+            return $stmt;
+        } catch(PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+        }
+    }
     
 }
 
