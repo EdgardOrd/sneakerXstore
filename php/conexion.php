@@ -31,6 +31,18 @@ class conexion
         return $this->connection;
     }
     
+    // public function login($username, $password)
+    // {
+    //     try {
+    //         $sql = "SELECT * FROM usuarios WHERE username = '$username' AND password = '$password'";
+    //         $stmt = $this->connection->prepare($sql);
+    //         $stmt->execute();
+    //         return $stmt;
+    //     } catch(PDOException $e) {
+    //         echo $sql . "<br>" . $e->getMessage();
+    //     }
+    // }
+
     public function getData()
     {
         try {
