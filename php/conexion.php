@@ -58,11 +58,21 @@ class conexion
     public function getInStock($talla)
     {
         try {
-            $sql = "SELECT z.id, z.nombre, z.marca, z.precio, z.imagen,t.talla, s.cantidad
-            FROM sneakers AS z
-            JOIN stock AS s ON z.id = s.sneaker_id
-            JOIN tallas AS t ON t.id = s.talla_id
-            WHERE t.talla = $talla AND s.cantidad > 0";
+            if($talla == 0)
+            {
+                $sql =" SELECT z.id, z.nombre, z.marca, z.precio, z.imagen,t.talla, s.cantidad
+                FROM sneakers AS z
+                JOIN stock AS s ON z.id = s.sneaker_id
+                JOIN tallas AS t ON t.id = s.talla_id";
+            }
+            else
+            {
+                $sql = "SELECT z.id, z.nombre, z.marca, z.precio, z.imagen,t.talla, s.cantidad
+                FROM sneakers AS z
+                JOIN stock AS s ON z.id = s.sneaker_id
+                JOIN tallas AS t ON t.id = s.talla_id
+                WHERE t.talla = $talla AND s.cantidad > 0";
+            }
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
             return $stmt;

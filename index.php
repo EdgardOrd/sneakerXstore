@@ -4,7 +4,13 @@ session_start();
 
 require_once('./php/conexion.php');
 require_once('./php/component.php');
-
+if (isset($_GET['id'])) {
+    // Si existe, se asigna su valor a una variable
+    $id = $_GET['id'];
+  } else {
+    // Si no existe, se asigna el valor cero a la variable
+    $_GET['id'] = 0;
+  }
 
 // create instance of conexion class
 $database = new conexion();
@@ -98,7 +104,8 @@ if (isset($_POST['add'])) {
         </div>
         <div class="row text-center py-3">
             <?php
-            $result = $database->getInStock($_GET["id"]);
+            
+            $result = $database->getInStock($_GET['id']);
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 component($row['nombre'], $row['precio'], $row['imagen'], $row['id']);
             }
