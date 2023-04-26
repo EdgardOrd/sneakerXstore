@@ -7,7 +7,7 @@ class conexion
     private $user = 'root';      // no debe ser publciada en repositorios
     private $password = '1234567';  // no debe ser publciada en repositorios
     private $database = 'store';
-    private $table = "sneakers";
+    
     private $connection;
 
         // claconstructor
@@ -46,7 +46,7 @@ class conexion
     public function getData()
     {
         try {
-            $sql = "SELECT * FROM $this->table";
+            $sql = "SELECT * FROM sneakers";
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
             return $stmt;

@@ -1,11 +1,9 @@
 
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.php" class="navbar-brand">
-            
-            <img src=".\upload\logo.png"> 
-            
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+    <a href="index.php" class="navbar-brand w-10 mr-0"> 
+    <img src=".\upload\logo.png" class="img-fluid" style="width:100px;">
+</a>
         <button class="navbar-toggler"
             type="button"
                 data-toggle="collapse"
@@ -44,7 +42,7 @@
             <div class="navbar-nav">
                 <a href="aboutus.php" class="nav-item nav-link active">
                     <h5 class="px-5 cart">
-                        <i>Sobre nosotros</i> 
+                        <i>Sobre Nosotros</i> 
                     </h5>
                 </a>
             </div>
@@ -61,7 +59,9 @@
                         if (isset($_SESSION['cart'])){
                             $count = count($_SESSION['cart']);
                             echo "<span id=\"cart_count\" class=\"text-warning bg-light\">$count</span>";
-                        }else{
+                        }
+                        else
+                        {
                             echo "<span id=\"cart_count\" class=\"text-warning bg-light\">0</span>";
                         }
 
