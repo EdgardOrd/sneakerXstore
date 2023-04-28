@@ -6,6 +6,7 @@
     width: 360px;
     height: min-content;
     padding: 20px;
+    margin-top: 35px;
     border-radius: 12px;
     background-color: whitesmoke;
   }
@@ -19,6 +20,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
+    min-height: calc(100% - 70px);
   }
 
   .login h1{
@@ -42,6 +45,12 @@
     margin: 5px;
     padding: 5px;
   }
+
+  button.btn.btn-sucess {
+    background-color: #8B0000;
+    color: white;
+    }
+
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -77,22 +86,27 @@
 
         <div class="form-group">
             <button class="btn btn-sucess w-100" type="submit">Iniciar Sesión</button>
-            <br><br>
+            <br>
 
         </div>
     
-    
     <?php
     if (isset($_GET['error'])) {
-        echo "<p class='error'>Credenciales de inicio de sesion incorrectas</p>";
+        echo "<p class='error'>Credenciales de inicio de sesión incorrectas.</p>";
     }
 ?>
 </div> <!-- cierra el div del contenedor del formulario -->
 
-<br><br>
-
-</body>
 <?php
     require_once('php/footer.php');
-?>
+?>  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
 </html>
