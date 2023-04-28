@@ -39,14 +39,18 @@ html {
     margin-bottom: 40px;
   }
   footer {
-    background-color: black;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+ bottom: 0;
     width: 100%;
-    height: 40px;
-    color: white;
+    
   }
-
+  .footer-index {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+  }
 
 @media only screen and (min-width: 1200px) {
     .card {

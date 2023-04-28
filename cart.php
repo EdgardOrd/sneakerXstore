@@ -55,7 +55,7 @@ if (isset($_POST['remove'])) {
         <div class="row px-5">
             <div class="col-md-7">
                 <div class="shopping-cart">
-                    <h6>My Cart</h6>
+                    <h6>Mi carrito</h6>
                     <hr>
 
                     <?php
@@ -74,7 +74,7 @@ if (isset($_POST['remove'])) {
                             }
                         }
                     } else {
-                        echo "<h5>Cart is Empty</h5>";
+                        echo "<h5>El carrito está vacío</h5>";
                     }
 
                     ?>
@@ -84,21 +84,21 @@ if (isset($_POST['remove'])) {
             <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25">
 
                 <div class="pt-4">
-                    <h6>PRICE DETAILS</h6>
+                    <h6>DETALLES</h6>
                     <hr>
                     <div class="row price-details">
                         <div class="col-md-6">
                             <?php
                             if (isset($_SESSION['cart'])) {
                                 $count  = count($_SESSION['cart']);
-                                echo "<h6>Price ($count items)</h6>";
+                                echo "<h6>Precio ($count items)</h6>";
                             } else {
-                                echo "<h6>Price (0 items)</h6>";
+                                echo "<h6>Precio (0 items)</h6>";
                             }
                             ?>
-                            <h6>Delivery Charges</h6>
+                            <h6>Cargos por Entrega</h6>
                             <hr>
-                            <h6>Amount Payable</h6>
+                            <h6>Monto a pagar</h6>
                         </div>
                         <div class="col-md-6">
                             <h6>$<?php echo $total; ?></h6>
@@ -115,7 +115,7 @@ if (isset($_POST['remove'])) {
         </div>
     </div>
    
-
+   
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

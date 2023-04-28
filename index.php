@@ -19,7 +19,6 @@ if (isset($_GET['id'])) {
     $id = 0;
 }
 
-// create instance of conexion class
 $database = new conexion();
 
 if (isset($_POST['add'])) {
@@ -29,7 +28,7 @@ if (isset($_POST['add'])) {
         $item_array_id = array_column($_SESSION['cart'], "product_id");
 
         if (in_array($_POST['product_id'], $item_array_id)) {
-            echo "<script>alert('Product is already added in the cart..!')</script>";
+            echo "<script>alert('El par ya está en el carrito..!')</script>";
             echo "<script>window.location = 'index.php'</script>";
         } else {
 
@@ -48,7 +47,7 @@ if (isset($_POST['add'])) {
 
         // Create new session variable
         $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
+        //print_r($_SESSION['cart']);
     }
 }
 
@@ -56,13 +55,13 @@ if (isset($_POST['add'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopping Cart</title>
+    <title>Carrito de Compras</title>
     <link rel="icon" href="upload/logo2.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -132,10 +131,52 @@ if (isset($_POST['add'])) {
 
 
 
-    
+
+        </div> 
 </body>
 
+<div class="text-center text-white bg-dark footer" style="bottom:0;position:absolute;width:100%;">  
+ <div class=" pt-4">
+    
+    <section class="mb-4">
+      
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
 
+     
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+     
+      <a
+        class="btn btn-link btn-floating btn-lg text-white m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+    
+  </div>
+  
+
+  
+  <div class="text-center text-white p-4" style="background-color: rgba(0, 0, 0, 1);">
+    © 2023 Copyright:
+    <a class="text-white" href="">sneakerXstore</a>
+  </div>
+  
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
