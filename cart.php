@@ -28,13 +28,13 @@ if (isset($_POST['remove'])) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cart</title>
+    <title>Mi carrito</title>
     <link rel="icon" href="upload/logo2.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -64,11 +64,11 @@ if (isset($_POST['remove'])) {
                     if (isset($_SESSION['cart'])) {
                         $product_id = array_column($_SESSION['cart'], 'product_id');
 
-                        $result = $db->getData();
+                        $result = $db->getInStock(0);
                         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                             foreach ($product_id as $id) {
                                 if ($row['id'] == $id) {
-                                    cartElement($row['imagen'], $row['nombre'], $row['precio'], $row['id']);
+                                    cartElement($row['imagen'], $row['nombre'], $row['precio'], $row['id'],$row['cantidad'],$row['talla']);
                                     $total = $total + (int)$row['precio'];
                                 }
                             }
@@ -103,14 +103,14 @@ if (isset($_POST['remove'])) {
                         <div class="col-md-6">
                             <h6>$<?php echo $total; ?></h6>
                             <h6 class="text-success">FREE</h6>
-                            <hr>
+                        <hr>
                             <h6>$<?php
                                     echo $total;
                                     ?></h6>
                         </div>
                     </div>
                 </div>
-
+                <button type="submit" class="btn btn-dark btn-lg btn-block my-4">COMPRAR</button>
             </div>
         </div>
     </div>

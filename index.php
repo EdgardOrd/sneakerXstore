@@ -21,16 +21,21 @@ if (isset($_GET['id'])) {
 
 $database = new conexion();
 
+
 if (isset($_POST['add'])) {
     /// print_r($_POST['product_id']);
-    if (isset($_SESSION['cart'])) {
+    if (isset($_SESSION['cart'])) 
+    {
 
         $item_array_id = array_column($_SESSION['cart'], "product_id");
 
-        if (in_array($_POST['product_id'], $item_array_id)) {
-            echo "<script>alert('El par ya está en el carrito..!')</script>";
+        if (in_array($_POST['product_id'], $item_array_id)) 
+        {
+            echo "<script>alert('El par ya esta en el carrito..!')</script>";
             echo "<script>window.location = 'index.php'</script>";
-        } else {
+        } 
+        else 
+        {
 
             $count = count($_SESSION['cart']);
             $item_array = array(
@@ -39,15 +44,16 @@ if (isset($_POST['add'])) {
 
             $_SESSION['cart'][$count] = $item_array;
         }
-    } else {
+    } 
+    else 
+    {
 
         $item_array = array(
             'product_id' => $_POST['product_id']
         );
-
         // Create new session variable
         $_SESSION['cart'][0] = $item_array;
-        //print_r($_SESSION['cart']);
+        // print_r($_SESSION['cart']);
     }
 }
 
@@ -107,22 +113,22 @@ if (isset($_POST['add'])) {
                         echo "<option value='{$row['talla']}'>{$row['talla']}</option>";
                     }*/
                 ?>
-                <!-- </select> -->
+                
             </div>
         </div>
         <div class="row text-center py-3">
             <?php
             if($id == 0)
             {
-                $result = $database->getInStock(0);
+                $result = $database->getInStock(0); 
             }
             else
             {
-                $result = $database->getInStock($_GET["id"]);
+                $result = $database->getInStock($_GET["id"]); 
             }
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                component($row['nombre'], $row['precio'], $row['imagen'], $row['id']);
-            }
+                    component($row['nombre'], $row['precio'], $row['imagen'], $row['id']);
+                }
             ?>
         </div>
     </div>
