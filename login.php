@@ -66,17 +66,12 @@
     
     <div class="login">
 
-    <h2 class="text-center">Iniciar Sesión</h2>
+    <h2 class="text-center">Inicia sesión...</h2>
 
     <form action="./php/session.php" method="post">
         <div class="form-group">
-            <label class="form-label" for="username">Nombre de Usuario:</label>
-            <input class="form-control" type="text" id="username" name="username" required>
-        </div>
-
-        <div class="form-group">
-            <label class="form-label" for="email">Email:</label>
-            <input class="form-control" type="text" id="email" name="email" required>    
+            <label class="form-label" for="username_email">Usuario o email:</label>
+            <input class="form-control" type="text" id="username_email" name="username_email" required>
         </div>
 
         <div class="form-group">
