@@ -82,7 +82,7 @@ if (isset($_POST['remove'])) {
                                             <small class=\"text-secondary\">Vendido por: sneakerXstore</small>
                                             <div class=\"d-flex align-items-center mb-4 w-100\">
                                                 <label for=\"cantidad\" class=\"txt-dark mx-3\">Cantidad:</label>
-                                                <input type=\"number\" id=\"cantidad\" class=\"form-control w-25 d-inline\" name=\"cantidad\" value=\"1\" min=\"1\" max=\"{$row['cantidad']}\" onchange='cantidadChange({$row['precio']} )'>
+                                                <input type=\"number\" id=\"cantidad\" class=\"form-control w-25 d-inline\" name=\"cantidad\" value=\"1\" min=\"1\" max=\"{$row['cantidad']}\" onchange='cantidadChange({$row['precio']})'>
                                                 <label for=\"talla\" class=\"txt-dark mx-3\">Talla:</label>
                                                 <input type=\"text\" id=\"talla\" class=\"form-control w-25 d-inline\" name=\"talla\" value=\"{$row['talla']}\" readonly>
                                             </div>
@@ -125,8 +125,12 @@ if (isset($_POST['remove'])) {
                             <h6>Monto a pagar</h6>
                         </div>
                         <div class="col-md-6">
-                            <h6>$<?php echo $total; ?></h6>
-                            <h6 class="text-success">FREE</h6>
+                        <h6>$<span id='total2'>
+                                    <?php
+                                    echo $total;
+                                    ?>
+                                </span></h6>
+                            <h6 class="text-success">GRATIS</h6>
                             <hr>
                             <h6>$<span id='total'>
                                     <?php
@@ -146,7 +150,11 @@ if (isset($_POST['remove'])) {
         const cantidadChange = (precio) => {
             let prevTotal = document.getElementById('total').innerText;
             let nextTotal = parseInt(prevTotal) + precio;
-            document.getElementById('total').innerText = nextTotal
+            document.getElementById('total').innerText = nextTotal;
+
+            let prevTotal2 = document.getElementById('total2').innerText;
+            let nextTotal2 = parseInt(prevTotal) + precio;
+            document.getElementById('total2').innerText = nextTotal
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS `sneakers`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sneakers` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
-  `marca` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
+  `nombre` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `marca` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `precio` float DEFAULT NULL,
-  `imagen` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `imagen` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -70,7 +70,7 @@ CREATE TABLE `stock` (
 
 LOCK TABLES `stock` WRITE;
 /*!40000 ALTER TABLE `stock` DISABLE KEYS */;
-INSERT INTO `stock` VALUES (2,12,1,10),(3,3,1,10),(4,10,1,10),(5,5,2,10),(6,7,3,10),(7,1,4,10),(8,4,7,10),(9,11,7,10),(10,6,7,10),(11,13,4,10);
+INSERT INTO `stock` VALUES (2,12,1,7),(3,3,1,10),(4,10,1,10),(5,5,2,10),(6,7,3,10),(7,1,4,10),(8,4,7,10),(9,11,7,10),(10,6,7,10),(11,13,4,10);
 /*!40000 ALTER TABLE `stock` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -108,11 +108,11 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(70) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `username` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(70) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -121,7 +121,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'derysrodriguez','derysrodriguez123','derysdominguez@gmail.com'),(2,'edgardordenez','edgardordonez123','edgardordonez@gmail.com'),(3,'fernandobautista','fernandobautista123','fernandobautista@gmail.com');
+INSERT INTO `usuarios` VALUES (1,'derysrodriguez','derysrodriguez123','derysdominguez@gmail.com'),(2,'edgardordenez','edgardordonez123','edgardordonez@gmail.com'),(3,'fernandobautista','fernandobautista123','fernandobautista@gmail.com'),(4,'juanalvarenga','juanalvarenga123','juanalvarenga@gmail.com');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -134,4 +134,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-27 18:02:44
+-- Dump completed on 2023-04-29 23:38:49
