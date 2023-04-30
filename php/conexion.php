@@ -92,6 +92,17 @@ class conexion
             echo $sql . "<br>" . $e->getMessage();
         }
     }
+
+    public function removeFromStock(){
+        // try {
+        //     $sql = "UPDATE stocks SET quantity = quantity - $quantity WHERE shoe_id = $shoe_id AND size = $size";
+        //     $stmt = $this->connection->prepare($sql);
+        //     $stmt->execute();
+        //     return $stmt;
+        // } catch(PDOException $e) {
+        //     echo $sql . "<br>" . $e->getMessage();
+        // }
+    }
     
 }
 

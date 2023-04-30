@@ -88,7 +88,7 @@ function cartElement($productimg, $productname, $productprice, $productid,$canti
             <div class=\"col-md-3 pl-0\">
                 <img src=$productimg alt=\"Image1\" class=\"img-fluid\">
             </div>
-            <div class=\"col-md-6\">
+            <div class=\"col-md-9\">
                 <h5 class=\"pt-2\">$productname</h5>
                 <small class=\"text-secondary\">Vendido por: sneakerXstore</small>
                 <div class=\"d-flex align-items-center mb-4 w-100\">
